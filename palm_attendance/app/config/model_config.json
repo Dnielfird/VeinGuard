@@ -1,0 +1,5 @@
+{
+  "model_path": "models/mobilenet_palm.tflite",
+  "input_size": [224, 224],
+  "class_names": ["2124591","2127967","2333333"]
+}

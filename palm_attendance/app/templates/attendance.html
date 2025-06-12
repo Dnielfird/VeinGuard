@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance | VeinGuard Portal</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      margin: 0; 
+      background-color: #f9f9f9; 
+    }
+    header { 
+      background-color: #183D7E; 
+      padding: 10px 20px; 
+      color: white; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    }
+    nav a { 
+      margin: 0 10px; 
+      color: white; 
+      text-decoration: none; 
+    }
+    .container { 
+      padding: 30px; 
+      max-width: 900px; 
+      margin: auto; 
+      background: #fff; 
+      border-radius: 10px; 
+      box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+      text-align: center; 
+    }
+    h2 { 
+      color: #183D7E; 
+    }
+    #videoFeed { 
+      border: 2px dashed #ccc; 
+      margin-top: 20px; 
+    }
+    #statusBox { 
+      margin-top: 15px; 
+      font-weight: bold; 
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>VeinGuard Portal</strong></div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/attendance">Attendance</a>
+      <a href="/register">Register</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Attendance</h2>
+    <img id="videoFeed" src="/video" width="500">
+    <div id="statusBox">📷 Scanning for palm vein...</div>
+  </div>
+
+  <script>
+    // Poll the backend every second to check verification status
+    function checkVerification() {
+      fetch("/check_verified")
+        .then(res => res.json())
+        .then(data => {
+          if (data.verified) {
+            window.location.href = `/verified/${data.matric}`;
+          }
+        })
+        .catch(err => console.error("Verification check failed:", err));
+    }
+
+    setInterval(checkVerification, 1000);
+  </script>
+
+</body>
+</html>

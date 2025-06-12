@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verification Successful | VeinGuard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #183D7E;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            margin-left: 15px;
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            padding: 40px;
+            background: white;
+            margin: 40px auto;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #183D7E;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px 5px;
+            vertical-align: top;
+        }
+        td:first-child {
+            font-weight: bold;
+            width: 35%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div><strong>VeinGuard Portal</strong></div>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/attendance">Attendance</a>
+        <a href="/register">Register</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2>✅ Verification Successful</h2>
+    <table>
+        <tr><td>Name:</td><td>{{ student.name }}</td></tr>
+        <tr><td>Matric No:</td><td>{{ student.matric }}</td></tr>
+        <tr><td>Email:</td><td>{{ student.email }}</td></tr>
+        <tr><td>Department:</td><td>{{ student.department }}</td></tr>
+        <tr><td>Phone:</td><td>{{ student.phone }}</td></tr>
+        <tr><td>Course Code:</td><td>{{ student.course_code }}</td></tr>
+        <tr><td>Section:</td><td>{{ student.section }}</td></tr>
+        <tr><td>Class Time:</td><td>{{ student.class_time }}</td></tr>
+    </table>
+</div>
+
+</body>
+</html>

@@ -16,3 +16,5 @@ STUDENT(S)
 SUPERVISOR
 
 DR. ASMARANI BINTI AHMAD PUZI
+
+To run the whole file - ensure that the file is correct path (Download "palm_attendance"). Run server.py, then open the localhost address. Then it will open interface of the attendance taking system.

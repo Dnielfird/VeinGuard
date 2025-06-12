@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register | VeinGuard Portal</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #183D7E;
+      padding: 10px 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #183D7E;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #183D7E;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1452aa;
+    }
+
+    .video-preview {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-align: center;
+      color: #183D7E;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>VeinGuard Portal</strong></div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/attendance">Attendance</a>
+      <a href="/register">Register</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Student Registration</h2>
+    <form method="POST">
+      <label>Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Matric No.:</label>
+      <input type="text" name="matric" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Department:</label>
+      <input type="text" name="department" required>
+
+      <label>Phone:</label>
+      <input type="text" name="phone" required>
+
+      <label>Course Code:</label>
+      <input type="text" name="course_code" required>
+
+      <label>Section:</label>
+      <input type="text" name="section" required>
+
+      <label>Class Time:</label>
+      <input type="text" name="class_time" required>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="video-preview">
+      <h3>📷 Palm Vein Registration</h3>
+      <img id="videoFeed" src="/video" width="500">
+    </div>
+
+    <a class="back-link" href="/">← Back to Home</a>
+  </div>
+
+</body>
+</html>
